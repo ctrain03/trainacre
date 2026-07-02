@@ -1,0 +1,137 @@
+/* Northern California Commercial Real Estate — shared styles */
+:root {
+  --navy: #12263a;
+  --gold: #c8a24b;
+  --slate: #4a5a6a;
+  --light: #f6f4ef;
+  --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--navy);
+  background: var(--white);
+  line-height: 1.65;
+}
+
+h1, h2, h3, nav, .btn, .services div h3 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+header {
+  background: var(--navy);
+  color: var(--white);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.logo { font-weight: 700; font-size: 1.15rem; letter-spacing: 0.03em; font-family: "Helvetica Neue", Arial, sans-serif; }
+.logo span { color: var(--gold); }
+
+nav a {
+  color: #d9e1e8;
+  text-decoration: none;
+  margin-left: 1.1rem;
+  font-size: 0.9rem;
+}
+nav a:hover, nav a.active { color: var(--gold); }
+
+.hero {
+  background: linear-gradient(rgba(18,38,58,0.88), rgba(18,38,58,0.88)),
+              var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 4.5rem 8%;
+}
+.hero h1 { font-size: 2.2rem; line-height: 1.25; max-width: 60rem; margin: 0 auto 1rem; }
+.hero p { max-width: 46rem; margin: 0 auto 1.75rem; color: #cfd8e0; font-size: 1.08rem; }
+
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+}
+.btn:hover { filter: brightness(1.08); }
+
+main { max-width: 68rem; margin: 0 auto; padding: 3rem 5%; }
+
+section { margin-bottom: 3rem; }
+section h2 { font-size: 1.5rem; margin-bottom: 1rem; border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 0.25rem; }
+section p { margin-bottom: 1rem; color: var(--slate); }
+section ul { margin: 0 0 1rem 1.4rem; color: var(--slate); }
+section li { margin-bottom: 0.4rem; }
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.25rem;
+}
+.services div {
+  background: var(--light);
+  border-left: 3px solid var(--gold);
+  padding: 1.25rem;
+  border-radius: 3px;
+}
+.services div h3 { font-size: 1.02rem; margin-bottom: 0.5rem; }
+.services div p { font-size: 0.93rem; margin: 0; }
+
+.city-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1.25rem;
+}
+.city-grid a {
+  display: block;
+  background: var(--navy);
+  color: var(--white);
+  text-decoration: none;
+  padding: 1.5rem 1.25rem;
+  border-radius: 3px;
+}
+.city-grid a:hover { outline: 2px solid var(--gold); }
+.city-grid a strong { display: block; font-family: "Helvetica Neue", Arial, sans-serif; margin-bottom: 0.35rem; color: var(--gold); }
+.city-grid a span { font-size: 0.88rem; color: #cfd8e0; }
+
+.faq details {
+  background: var(--light);
+  border-radius: 3px;
+  margin-bottom: 0.6rem;
+  padding: 0.9rem 1.1rem;
+}
+.faq summary { cursor: pointer; font-weight: 700; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 0.98rem; }
+.faq details p { margin: 0.6rem 0 0; }
+
+.cta-band {
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+  padding: 3rem 8%;
+}
+.cta-band h2 { color: var(--white); margin-bottom: 0.75rem; }
+.cta-band p { color: #cfd8e0; margin-bottom: 1.5rem; }
+
+footer {
+  background: #0c1a29;
+  color: #8fa1b0;
+  font-size: 0.83rem;
+  text-align: center;
+  padding: 2rem 8%;
+  line-height: 1.9;
+}
+footer a { color: var(--gold); text-decoration: none; }
+
+@media (max-width: 640px) {
+  .hero h1 { font-size: 1.6rem; }
+  nav a { margin-left: 0.7rem; }
+}
